@@ -237,33 +237,26 @@
                 <img class="hr" src="images/hr.png" alt="horizontal line graphic">
               </div>
 
-              <div id="appForm" class="form-group box">
+                <div id="appForm" role="form" class="form-group box" aria-labelledby="appFormHeading">
 
-                <div class="heading">Start your application</div>
-                  <p class="required reqExample">(required fields are in blue)</p>
+              <h2 id="appFormHeading">Start your application</h2>
+              <p>Fields with a <strong>*</strong> are required.</p>
+              <form action="after_u.html?submitted=yes" method="post">
 
-                <form action="#" method="post">
+                <div class="required form-group">
+                  <label for="name">Name: *</label>
+                  <input id="name" type="text" name="name" class="form-control" autocomplete="name" required/>
+                </div>
+                <div class="required form-group">
+                  <label for="email">Email: *</label>
+                  <input id="email" type="email" name="email" class="form-control" autocomplete="email" required/>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country:</label>
+                  <input type="text" name="country" id="country" class="form-control" autocomplete="country-name"/>
+                </div>
 
-                  <!-- container for displaying form errors -->
-                  <div id="error"></div>
-
-                  <div class="required form-group">
-    			<label for="name">Name:</label>
-   			 <input type="text" id="name" name="name" class="form-control" />
-		</div>
-
-		<div class="required form-group">
-   			 <label for="email">Email:</label>
-    			<input type="text" id="email" name="email" class="form-control" />
-		</div>
-
-		<div class="form-group">
-    			<label for="country">Country:</label>
-    			<input type="text" id="country" name="country" class="form-control" />
-		</div>
-
-                  <div class="form-group">
-               <fieldset id="majors">
+                <fieldset id="majors">
                   <legend>Desired major(s):</legend>
                   <ul class="list-unstyled">
                     <li>
@@ -288,7 +281,6 @@
                     </li>
                   </ul>
                 </fieldset>
-
   </div>
 </div>
 
